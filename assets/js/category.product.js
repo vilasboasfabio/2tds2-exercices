@@ -5,7 +5,7 @@ class Category{
     constructor(id, name){
         this.id = id;
         this.name = name;
-        thid.products = []
+        this.products = []
     }
 }
 class Product {
@@ -31,5 +31,9 @@ class CategoryService {
 }
 const categoryList = new CategoryService();
 function createCategory(){
+    const categoryName = 'Candies';
+
+    categoryList.addCategory(categoryName)
+    console.log(categoryList.categories)
 
 }
