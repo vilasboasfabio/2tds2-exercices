@@ -87,3 +87,7 @@ function editCategory(id, name){
     categoryList.updateCategory(id,name);
     console.log(categoryList.categories);
 }                                
+function deleteCategory(id){
+    categoryList.deleteCategory(id);
+    console.log(categoryList.categories);
+}
