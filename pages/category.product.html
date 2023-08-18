@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../assets/js/category.product.js"></script>
+    <link rel="stylesheet" href="../assets/css/category.product.css">
     <title>Product Categorys </title>
 </head>
 <body>
-    <button onclick="createCategory()">Criar Categoria</button>
-    <button onclick="createProduct()">Criar Produto</button>
-    <button onclick="findCategory(1)">Encontrar Categoria</button>
-    <button onclick="editCategory(1, `Doce` )">Editar Categoria</button>
-    <button onclick="deleteCategory(2)">Deletar Categoria</button>
-
-    <div>
-        <h2>Produtos</h2>
-        <button onclick="createProduct()">Criar Produto</button>
-        <button onclick="findProductById(1)">Encontrar produto</button>
+   <div id="container">
+    <h1>🛍️ Categorias & Produtos</h1>
+    <div class="form_container">
+        <h2>🗂️ Criar Categoria</h2>
+        <label for="">Nome da Categoria:</label>
+        <input type="text" required placeholder="Digite o nome" >
+        <button>Criar Categoria</button>
     </div>
+   </div>
+   
 </body>
 </html>
