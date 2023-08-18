@@ -47,6 +47,10 @@ class ProductService{
         this.products.push(product);
         category.products.push(product);
     }
+    updateCategory(id, name){
+        const category = this.getCategoryById(id);
+        category.name = name;
+    }
 }
 
 const categoryList = new CategoryService();
