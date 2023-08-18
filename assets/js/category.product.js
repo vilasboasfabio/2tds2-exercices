@@ -32,6 +32,16 @@ class CategoryService {
     getCategoryById(id){
         return this.categories.find((category)=> category.id == id );
     }
+    updateCategory(id, name){
+        const category = this.getCategoryById(id);
+        category.name = name;
+    }
+    deleteCategory(id){
+        const category = this.getCategoryById(id);
+        const index = this.categories.indexOf(category);
+
+        this.categories.splice(index, 1);
+    }
 }
 class ProductService{
     constructor(){
@@ -47,10 +57,7 @@ class ProductService{
         this.products.push(product);
         category.products.push(product);
     }
-    updateCategory(id, name){
-        const category = this.getCategoryById(id);
-        category.name = name;
-    }
+   
 }
 
 const categoryList = new CategoryService();
