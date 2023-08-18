@@ -15,6 +15,7 @@ class Product {
         this.price = price;
         this.category = category;
     }
+
 }
 class CategoryService {
     constructor(){
@@ -56,6 +57,9 @@ class ProductService{
 
         this.products.push(product);
         category.products.push(product);
+    }
+    getProductById(id){
+        return this.products.find((product) => product.id ==id);
     }
    
 }
