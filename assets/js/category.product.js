@@ -57,9 +57,11 @@ class ProductService{
 
         this.products.push(product);
         category.products.push(product);
+        createProduct();
     }
     getProductById(id){
         return this.products.find((product) => product.id ==id);
+
     }
    
 }
@@ -68,19 +70,31 @@ const categoryList = new CategoryService();
 const productsList = new  ProductService();
 function createCategory(){
     const categoryName = 'Candies';
+    const categoryName2 = 'Shoes';
+    const categoryName3 = 'Books';
 
+    categoryList.addCategory(categoryName2)
+    categoryList.addCategory(categoryName3)
     categoryList.addCategory(categoryName)
    // console.log(categoryList.categories)
 
 }
 function createProduct(){
-    const productName = "Lindt";
-    const productPrice = 50;
-    const productCategory = categoryList.categories[0];
+    const productName1 = "Lindt"
+    const productPrice1 = 30;
+    const productCategory1 = categoryList.categories[1];
 
-    productsList.addProduct(productName, productPrice, productCategory )
-    // console.log(productsList.products)
+    const productName2 = "Sneaker"
+    const productPrice2 = 30;
+    const productCategory2 = categoryList.categories[2];
 
+    const productName3 = "Red, White and Royal Blue"
+    const productPrice3 = 30;
+    const productCategory3 = categoryList.categories[3];
+
+    productsList.addProduct(productName1, productPrice1, productCategory1 )
+    productsList.addProduct(productName2, productPrice2, productCategory2 )
+    productsList.addProduct(productName3, productPrice3, productCategory3 )
 }
 function findCategory(id){
     const category = categoryList.getCategoryById(id);
@@ -94,4 +108,10 @@ function editCategory(id, name){
 function deleteCategory(id){
     categoryList.deleteCategory(id);
     console.log(categoryList.categories);
+}
+
+function findProduct(id){
+    const product = productsList.getProductById(id);
+
+    console.log(product);
 }
