@@ -64,6 +64,11 @@ function createProduct(){
     const productCategory = categoryList.categories[0];
 
     productsList.addProduct(productName, productPrice, productCategory )
-    console.log(productsList.products)
+    // console.log(productsList.products)
 
 }
+function findCategory(id){
+    const category = categoryList.getCategoryById(id);
+
+    console.log(category.name);
+}                                                   
